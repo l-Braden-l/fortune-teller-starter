@@ -35,9 +35,9 @@ if question == 'y' or 'yes':
         index = random.randrange(0,5)
         print(fortunes[index])#is not doing this
     else:
-        print('Please choose a magic color of either blue, red, green or yellow.')#
+        print('Please choose a magic color of either blue, red, green or yellow.')#printing this no matter what 
         time.sleep(1)
-        print('Once you have input a magic color, I will reveal your Fortune!')
+        print('Once you have input a magic color, I will reveal your Fortune!')#printing this no matter what 
 else:
     print(f'Thank you for playing my Fortune Teller game today, {user_name}!')
     print('Goodbye!')
