@@ -36,6 +36,7 @@ if question in ['y','yes']:
     if color in magic_colors:
         index = random.randint(0,len(fortunes) -1)
         print(fortunes[index])#is not doing this
+        time.sleep(2)
     else:
         print('Please choose a magic color of either blue, red, green or yellow.')#printing this no matter what 
         time.sleep(1)
@@ -44,6 +45,6 @@ else:
     print(f'Thank you for playing my Fortune Teller game today, {user_name}!')
     print('Goodbye!\n')
     sys.exit()
-
+print()
 print(f'Thank you for playing my Fortune Teller game today, {user_name}!')
 print('Goodbye!\n')
