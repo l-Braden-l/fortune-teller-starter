@@ -12,27 +12,29 @@ fortunes = ['You are a winner!','A secret admirer will soon send you a sign of a
 magic_colors = ['blue','red','green','yellow']
 
 #get username
-user_name = input('Please enter your first name: ')
+user_name = input('Please enter your first name: \n')
 
 #welcome message 
-print(f'Welcome to my Python Fortune Teller program, {user_name}')
+print(f'Welcome to my Python Fortune Teller program, {user_name}!')
 
 #ask if user wants a fortune
-question = input('Do you want me to tell your fortune? [y/n]\n').lower
+question = input('Do you want me to tell your fortune? [y/n]\n').lower()
+time.sleep(2)
 
     #If else statment
-if question == 'y' or 'yes':
+if question in ['y','yes']:
     time.sleep(1)
-    color = input('Okay! To get your fortune, please input a magic color: [blue/red/green/yellow]\n').lower
+    color = input('Okay! To get your fortune, please input a magic color: [blue/red/green/yellow]\n').lower()
+
     time.sleep(1)
     print('Getting your fortune...')
     time.sleep(2)
-    print(f'Here is your fortune, {user_name}')
+    print(f'Here is your fortune, {user_name.title()}:')
     time.sleep(1)
 
     #Nested
     if color in magic_colors:
-        index = random.randrange(0,5)
+        index = random.randint(0,len(fortunes) -1)
         print(fortunes[index])#is not doing this
     else:
         print('Please choose a magic color of either blue, red, green or yellow.')#printing this no matter what 
@@ -40,5 +42,8 @@ if question == 'y' or 'yes':
         print('Once you have input a magic color, I will reveal your Fortune!')#printing this no matter what 
 else:
     print(f'Thank you for playing my Fortune Teller game today, {user_name}!')
-    print('Goodbye!')
+    print('Goodbye!\n')
+    sys.exit()
 
+print(f'Thank you for playing my Fortune Teller game today, {user_name}!')
+print('Goodbye!\n')
